@@ -134,7 +134,6 @@ const FinanceTracker: React.FC = () => {
     const totalIncome = transactions.filter(t => t.type === 'income').reduce((sum, t) => sum + t.amount, 0);
     const totalExpenses = transactions.filter(t => t.type === 'expense').reduce((sum, t) => sum + t.amount, 0);
     const netBalance = totalIncome - totalExpenses;
-    const totalSavings = savingsPods.reduce((sum, pod) => sum + pod.currentAmount, 0);
     const totalInvestments = investments.reduce((sum, inv) => sum + inv.currentValue, 0);
 
     return (
